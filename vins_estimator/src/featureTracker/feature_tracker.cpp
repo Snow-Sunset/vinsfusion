@@ -545,7 +545,7 @@ void FeatureTracker::drawTrack(const cv::Mat &imLeft, const cv::Mat &imRight,
         cv::hconcat(imLeft, imRight, imTrack);
     else
         imTrack = imLeft.clone();
-    cv::cvtColor(imTrack, imTrack, CV_GRAY2RGB);
+    cv::cvtColor(imTrack, imTrack, cv::COLOR_GRAY2RGB);
 	// 绘制左目特征点
     for (size_t j = 0; j < curLeftPts.size(); j++)
     {
